@@ -828,16 +828,22 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
   security_patch = target_info.GetBuildProp("ro.build.version.security_patch")
   device = target_info.GetBuildProp("org.pixelexperience.device")
 
-  script.Print("----------------------------------------------");
-  script.Print("              Pixel Experience");
-  script.Print("               by jhenrique09");
-  script.Print("----------------------------------------------");
+  script.Print("---------------------------------------------");
+  script.Print("  oooooo8 oooooooo   ooooo    ooooo8 oooooooo");
+  script.Print("o888   88 88 88 88 o88   88o 88      88   888");
+  script.Print("888          88    888   888  88oooo 88ooo88 ");
+  script.Print("888o   oo    88    88o   o88      88 88      ");
+  script.Print(" 888oo88    o88o     88o88   o8oo888 o88o    ");
+  script.Print("---------------------------------------------");
+  script.Print("                By CTOSP-Team");
+  script.Print("---------------------------------------------");
+  script.Print("---------------------------------------------");
   script.Print(" Android version: %s"%(android_version));
   script.Print(" Build id: %s"%(build_id));
   script.Print(" Build date: %s"%(build_date));
   script.Print(" Security patch: %s"%(security_patch));
   script.Print(" Device: %s"%(device));
-  script.Print("----------------------------------------------");
+  script.Print("---------------------------------------------");
   device_specific.FullOTA_InstallBegin()
 
   CopyInstallTools(output_zip)
