@@ -920,14 +920,25 @@ else if get_stage("%(bcb_dev)s") == "3/3" then
 
   android_version = target_info.GetBuildProp("ro.build.version.release")
   build_id = target_info.GetBuildProp("ro.build.id")
-  build_date = target_info.GetBuildProp("org.pixelexperience.build_date")
+  build_date = target_info.GetBuildProp("org.ctosp.build_date")
   security_patch = target_info.GetBuildProp("ro.build.version.security_patch")
-  device = target_info.GetBuildProp("org.pixelexperience.device")
+  device = target_info.GetBuildProp("org.ctosp.device")
 
-  script.Print("----------------------------------------------");
-  script.Print("              Pixel Experience");
-  script.Print("               by jhenrique09");
-  script.Print("----------------------------------------------");
+  script.Print("---------------------------------------------------------------------------------");
+  script.Print("                                                                                 ");
+  script.Print("______________________________________________________________________           ");     
+  script.Print(" ______________________________________________________________________          ");
+  script.Print("  ___________________/\\\___________________________________/\\\\\\\\\__         ");
+  script.Print("   _____/\\\\\\\\__/\\\\\\\\\\\_____/\\\\\_____/\\\\\\\\\\__/\\\/////\\\_        ");
+  script.Print("    ___/\\\//////__\////\\\////____/\\\///\\\__\/\\\//////__\/\\\\\\\\\\__       ");
+  script.Print("     __/\\\____________\/\\\_______/\\\__\//\\\_\/\\\\\\\\\\_\/\\\//////___      ");
+  script.Print("      _\//\\\___________\/\\\_/\\__\//\\\__/\\\__\////////\\\_\/\\\_________     ");
+  script.Print("       __\///\\\\\\\\____\//\\\\\____\///\\\\\/____/\\\\\\\\\\_\/\\\_________    ");
+  script.Print("        ____\////////______\/////_______\/////_____\//////////__\///__________   ");
+  script.Print("                                                                                 ");
+  script.Print("                                  By VAMSEE9                                     "); 
+  script.Print("                                                                                 ");
+  script.Print("---------------------------------------------------------------------------------");
   script.Print(" Android version: %s"%(android_version));
   script.Print(" Build id: %s"%(build_id));
   script.Print(" Build date: %s"%(build_date));
