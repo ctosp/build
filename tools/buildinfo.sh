@@ -14,7 +14,7 @@ echo "ro.build.version.all_codenames=$PLATFORM_VERSION_ALL_CODENAMES"
 echo "ro.build.version.release=$PLATFORM_VERSION"
 if [ -n "$PLATFORM_SECURITY_PATCH_OVERRIDE" ] ; then
   echo "ro.build.version.security_patch=$PLATFORM_SECURITY_PATCH_OVERRIDE"
-  echo "ro.evolution.build.version.security_patch=$PLATFORM_SECURITY_PATCH"
+  echo "ro.ctosp.build.version.security_patch=$PLATFORM_SECURITY_PATCH"
 else
   echo "ro.build.version.security_patch=$PLATFORM_SECURITY_PATCH"
 fi
