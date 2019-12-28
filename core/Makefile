@@ -1869,7 +1869,7 @@ $(RECOVERY_INSTALL_OTA_KEYS): $(SOONG_ZIP) $(OTA_PUBLIC_KEYS) $(extra_keys)
 RECOVERYIMAGE_ID_FILE := $(PRODUCT_OUT)/recovery.id
 
 define build-recoveryramdisk
-  $(hide) ./vendor/aosp/tools/changelog.sh
+  $(hide) ./vendor/ctosp/tools/changelog.sh
   $(hide) mv $(PRODUCT_OUT)/Changelog.txt $(PRODUCT_OUT)/$(CUSTOM_VERSION)-Changelog.txt
   @echo ----- Making recovery image ------
   $(hide) mkdir -p $(TARGET_RECOVERY_OUT)
@@ -2298,7 +2298,7 @@ endif
 
 # $(1): output file
 define build-systemimage-target
-  $(hide) ./vendor/aosp/tools/changelog.sh
+  $(hide) ./vendor/ctosp/tools/changelog.sh
   $(hide) mv $(PRODUCT_OUT)/Changelog.txt $(PRODUCT_OUT)/$(CUSTOM_VERSION)-Changelog.txt
   @echo "Target system fs image: $(1)"
   $(call create-system-vendor-symlink)
@@ -4212,7 +4212,7 @@ endif
 ifneq ($(BOARD_SUPER_PARTITION_GROUPS),)
 	$(hide) echo "super_partition_groups=$(BOARD_SUPER_PARTITION_GROUPS)" > $(zip_root)/META/dynamic_partitions_info.txt
 	@# Remove 'vendor' from the group partition list if the image is not available. This should only
-	@# happen to AOSP targets built without vendor.img. We can't remove the partition from the
+	@# happen to ctosp targets built without vendor.img. We can't remove the partition from the
 	@# BoardConfig file, as it's still needed elsewhere (e.g. when creating super_empty.img).
 	$(foreach group,$(BOARD_SUPER_PARTITION_GROUPS), \
 	    $(eval _group_partition_list := $(BOARD_$(call to-upper,$(group))_PARTITION_LIST)) \
